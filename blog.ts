@@ -10,8 +10,8 @@ interface Blog {
 
 // Sample blog data
 const blogs: Blog[] = [
-    {
-        image: "/bootcamp-project-2025/malaga.jpg",
+  {
+    image: "malaga.jpg",
     imageAlt: "View of Malaga, Spain",
     title: "My Study Abroad Experience",
     content:
@@ -55,7 +55,7 @@ function displayBlogs(): void {
 
     // Create a link wrapper for the entire blog post
     const blogLink = document.createElement("a");
-    blogLink.href = `/bootcamp-project-2025/blogs/${blog.slug}.html`;
+    blogLink.href = `blogs/${blog.slug}.html`;
     blogLink.className = "blog-link";
 
     // Step 2: Create child elements

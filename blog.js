@@ -1,7 +1,7 @@
 // Sample blog data
 var blogs = [
     {
-        image: "/bootcamp-project-2025/malaga.jpg",
+        image: "malaga.jpg",
         imageAlt: "View of Malaga, Spain",
         title: "My Study Abroad Experience",
         content: "During my time studying in Malaga, Spain, I discovered a whole new perspective on software development. From collaborating with international teams to learning about European tech practices, every day brought new insights. The Spanish approach to work-life balance and team dynamics has completely changed how I think about project management.",
@@ -39,7 +39,7 @@ function displayBlogs() {
         blogPostDiv.className = "blog-post";
         // Create a link wrapper for the entire blog post
         var blogLink = document.createElement("a");
-        blogLink.href = "/bootcamp-project-2025/blogs/".concat(blog.slug, ".html");
+        blogLink.href = "blogs/".concat(blog.slug, ".html");
         blogLink.className = "blog-link";
         // Step 2: Create child elements
         // Create and set up the image
