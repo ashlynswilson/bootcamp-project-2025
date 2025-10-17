@@ -32,8 +32,14 @@ function displayBlogs() {
     const blogContainer = document.getElementById("blog-container");
     if (!blogContainer)
         return;
-    // Clear any existing content
-    blogContainer.innerHTML = "";
+    // TEST: Add a visible message to confirm script is running
+    const testMessage = document.createElement("div");
+    testMessage.textContent = "[TEST] blog.js script loaded and running.";
+    testMessage.style.color = "red";
+    testMessage.style.fontWeight = "bold";
+    blogContainer.appendChild(testMessage);
+    // Clear any existing content (after test message)
+    // blogContainer.innerHTML = "";
     // Iterate over each blog in the blogs array
     blogs.forEach((blog) => {
         // Step 1: Create a new div element for the blog post container
