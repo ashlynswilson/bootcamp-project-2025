@@ -55,7 +55,7 @@ function displayBlogs(): void {
 
     // Create a link wrapper for the entire blog post
     const blogLink = document.createElement("a");
-    blogLink.href = `blogs/${blog.slug}.html`;
+    blogLink.href = `./blogs/${blog.slug}.html`;
     blogLink.className = "blog-link";
 
     // Step 2: Create child elements

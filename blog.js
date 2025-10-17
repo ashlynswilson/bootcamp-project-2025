@@ -39,7 +39,7 @@ function displayBlogs() {
         blogPostDiv.className = "blog-post";
         // Create a link wrapper for the entire blog post
         var blogLink = document.createElement("a");
-        blogLink.href = "blogs/".concat(blog.slug, ".html");
+        blogLink.href = "./blogs/".concat(blog.slug, ".html");
         blogLink.className = "blog-link";
         // Step 2: Create child elements
         // Create and set up the image
