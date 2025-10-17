@@ -1,5 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // Sample blog data
-var blogs = [
+const blogs = [
     {
         image: "malaga.jpg",
         imageAlt: "View of Malaga, Spain",
@@ -27,36 +29,36 @@ var blogs = [
 ];
 function displayBlogs() {
     // Get the blog container
-    var blogContainer = document.getElementById("blog-container");
+    const blogContainer = document.getElementById("blog-container");
     if (!blogContainer)
         return;
     // Clear any existing content
     blogContainer.innerHTML = "";
     // Iterate over each blog in the blogs array
-    blogs.forEach(function (blog) {
+    blogs.forEach((blog) => {
         // Step 1: Create a new div element for the blog post container
-        var blogPostDiv = document.createElement("div");
+        const blogPostDiv = document.createElement("div");
         blogPostDiv.className = "blog-post";
         // Create a link wrapper for the entire blog post
-        var blogLink = document.createElement("a");
-        blogLink.href = "./blogs/".concat(blog.slug, ".html");
+        const blogLink = document.createElement("a");
+        blogLink.href = `./blogs/${blog.slug}.html`;
         blogLink.className = "blog-link";
         // Step 2: Create child elements
         // Create and set up the image
-        var image = document.createElement("img");
+        const image = document.createElement("img");
         image.src = blog.image;
         image.alt = blog.imageAlt;
         image.className = "blog-image";
         // Create title using h1
-        var title = document.createElement("h1");
+        const title = document.createElement("h1");
         title.textContent = blog.title;
         title.className = "blog-title";
         // Create date element
-        var date = document.createElement("p");
+        const date = document.createElement("p");
         date.textContent = blog.datePosted;
         date.className = "blog-date";
         // Create description paragraph
-        var description = document.createElement("p");
+        const description = document.createElement("p");
         description.textContent = blog.content;
         description.className = "blog-content";
         // Step 3: Append all elements to the link wrapper
@@ -72,3 +74,4 @@ function displayBlogs() {
 }
 // Call the function when the page loads
 window.addEventListener("DOMContentLoaded", displayBlogs);
+//# sourceMappingURL=blog.js.map
